@@ -1,6 +1,11 @@
 #include <napi.h>
+#include "lib.h"
 
 Napi::Object InitAll(Napi::Env env, Napi::Object exports) {
+  exports.Set(
+    "ledblink",
+    Napi::Function::New(env, ledBlink)
+  );
   return exports;
 }
 
