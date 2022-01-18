@@ -1,4 +1,11 @@
 #include <wiringPi.h>
 #include <stdio.h>
+#include <string>
+#include <napi.h>
 
-void ledBlink();
+namespace led
+{
+    std::string ledBlink();
+    Napi::String ledWrapped(const Napi::CallbackInfo& info);
+    Napi::Object Init(Napi::Env env, Napi::Object exports);
+}
