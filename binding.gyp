@@ -6,9 +6,9 @@
         "sources": [
             "cppsrc/main.cpp",
             "cppsrc/lib.cpp",
-            "../WiringPi/wiringPi/wiringPi.c",
-            "../WiringPi/wiringPi/softPwm.c",
-            "../WiringPi/wiringPi/softTone.c",
+            "<!(find ~/ -name 'wiringPi.c')",
+            "<!(find ~/ -name 'softPwm.c')",
+            "<!(find ~/ -name 'softTone.c')",
         ],
         'include_dirs': [
             "<!@(node -p \"require('node-addon-api').include\")"
