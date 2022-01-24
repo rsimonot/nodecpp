@@ -1,6 +1,6 @@
 {
-  "name": "node_cpp_sample",
-  "version": "1.0.0",
+  "name": "node_cpp_test",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "gypfile": true,

@@ -6,14 +6,14 @@
         "sources": [
             "cppsrc/main.cpp",
             "cppsrc/lib.cpp",
-            "<!(find ~/ -name 'wiringPi.c')",
-            "<!(find ~/ -name 'softPwm.c')",
-            "<!(find ~/ -name 'softTone.c')",
         ],
         'include_dirs': [
-            "<!@(node -p \"require('node-addon-api').include\")"
+            "<!@(node -p \"require('node-addon-api').include\")",
+            "include"
         ],
-        'libraries': [],
+        'libraries': [
+            "<!(pwd)/include/wiringPi.a"
+        ],
         'dependencies': [
             "<!(node -p \"require('node-addon-api').gyp\")"
         ],
